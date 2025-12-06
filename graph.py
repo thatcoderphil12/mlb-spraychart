@@ -7,8 +7,6 @@ cache.enable()
 players = input("Please enter the player's name in First Last format (or First1 Last1, First2 Last2, etc. (or First1 Last1, First2 Last2, etc.): ").strip()
 playerlist = players.split(", ")
 for player in playerlist:
-    playerlist = players.split(", ")
-for player in playerlist:
     first_name, last_name = player.split()
     savef = first_name.lower()
     savel = last_name.lower()
