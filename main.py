@@ -4,7 +4,7 @@ from pybaseball import cache
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 cache.enable() 
-playerss = input("Please enter the player's name in First Last format (or First1 Last1, First2 Last2, etc. (or First1 Last1, First2 Last2, etc.)): ").strip()
+players = input("Please enter the player's name in First Last format (or First1 Last1, First2 Last2, etc. (or First1 Last1, First2 Last2, etc.): ").strip()
 playerlist = players.split(", ")
 for player in playerlist:
     playerlist = players.split(", ")
