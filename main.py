@@ -1,5 +1,6 @@
 import pybaseball
 from pybaseball import statcast_batter
+from pybaseball import statcast_batter
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 player = input("Please enter the player's name (First Last): ")
