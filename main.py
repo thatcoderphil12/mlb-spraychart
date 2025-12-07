@@ -11,9 +11,11 @@ def main():
     choice = input("Select an option (1 or 2): ").strip()
     
     if choice == "1":
-        subprocess.run([sys.executable, ".graph.py"])
+        print("=" * 40)
+        subprocess.run([sys.executable, "graph.py"])
     elif choice == "2":
-        subprocess.run([sys.executable, ".cleanup.py"])
+        print("=" * 40)
+        subprocess.run([sys.executable, "cleanup.py"])
     else:
         print("Invalid choice. Please enter 1 or 2.")
         main()
