@@ -7,6 +7,8 @@ def main():
     choice = input("Select an option (1 or 2): ").strip()
     if choice == "1":
         print("=" * 40)
+        import matplotlib
+        matplotlib.use('Agg')
         import pybaseball
         from pybaseball import statcast_batter
         from pybaseball import cache
@@ -37,21 +39,13 @@ def main():
             plt.tight_layout()
             plt.savefig(f'{savef}_{savel}', dpi=300, bbox_inches='tight')
             print(f"Spray chart saved as {savef}_{savel}.png")
-            break
     elif choice == "2":
         print("=" * 40)
         import os
         import glob
         remove = glob.glob('*.png')
         for files in remove:
-            try:
-                os.remove(files)
-                print(f"Removed: {files}")
-                break
-            except OSError as e:
-                print(f"Error removing {files}: {e.strerror}")
-            else:
-                print("Invalid choice. Please enter 1 or 2.")
-                main()
+            os.remove(files)
+            print(f"Removed: {files}")
 if __name__ == "__main__":
     main()
